@@ -1,0 +1,264 @@
+/* variaveis css */
+:root {
+    --branco-principal: #FFFFFF;
+    --cinza-secundario: #C0C0C0;
+    --botao-azul: #167BF7;
+    --botao-azul-efeito: #362FD9;
+    --cor-fundo: #00030C;
+
+    /* vamos criar as variaveis para as fontes */
+    --fonte-principal: 'Inter', sans-serif;
+}
+
+/* resetar o css */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* cor de fundo do site */
+    background-color: var(--cor-fundo);
+
+    /* cor do texto */
+    color: var(--branco-principal);
+
+    /* vamos inserir um estilo de fonte */
+    font-family: var(--fonte-principal);
+
+    /* vamos inserir um tamanho da fonte */
+    font-size: 16px;
+
+    /* peso da fonte */
+    font-weight: 400;
+}
+
+/* sessao principal */
+.principal {
+    /* inserindo imagem de fundo meramente decorativa.
+    Por isso foi inserida no arquivo "style.css",
+    ao invés de ser inserida no arquivo "index.html */
+    background-image: url("img/Background.png");
+
+    /* esta repetindo a imagem de fundo abaixo dela mesma,
+    para evitar esta repetição segue o comando a baixo. */
+    background-repeat: no-repeat;
+
+    /* resolvendo espaçamento na esquerda,
+    para encaixar melhor a imagem na sessão */
+    background-size: contain;
+
+    /* vamos alinhar os itens no centro da section */
+    align-items: center;
+
+    /* vamos alinhar os textos no centro da section */
+    text-align: center;
+}
+
+/* vamos estilizar a "div" */
+.container__caixa {
+    /* espaçamento entre a esquerda e a direita */
+    margin: 0 6em;
+
+}
+
+/* sessao container */
+.container {
+    /* altura */
+    height: 100vh;
+
+    /* depois que usamos "display: block;"
+    na classe ".container__botao"
+    o botao ficou atravessando a pagina de um
+    lado para outro, vamos resolver isso */
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+}
+
+/* vamos estilizar o titulo */
+.container__titulo {
+    /* tamanho da fonte */
+    font-size: 28px;
+
+    /* peso da fonte */
+    font-weight: 700;
+}
+
+/* vamos estilizar a imagem combo,
+dando espaçamento tanto em cima quanto em baixo */
+.container__imagem {
+    margin: 1em 0 2em 0;
+}
+
+/* vamos estilizar o botao */
+.container__botao {
+    /* vamos colocar uma cor de fundo no botao */
+    background-color: var(--botao-azul);
+
+    /* vamos arredondar as bordas do botão */
+    border-radius: 4px;
+
+    /* aumentar a margem interna do botao,
+    dessa forma o botao fica mais espaçado */
+    padding: 1em;
+
+    /* mudando a cor do texto do botao */
+    color: var(--branco-principal);
+
+    /* vamos tirar o sublinhado do texto no botao */
+    text-decoration: none;
+
+    /* mudando a posicao do botao para block,
+    assim ele ocupara o bloco inteiro */
+    display: block;
+
+    /* vamos dar espaçamento entre os botoes e o avixo */
+    margin-bottom: 1em;
+}
+.container__botao:hover {
+    background-color: var(--botao-azul-efeito);
+}
+
+/* vamos estilizar o botao secundario */
+.botao_secundario {
+    /* vamos colocar uma cor de fundo no botao "transparente" */
+    background-color: transparent;
+
+    /* vamos criar a borda do botao */
+    border: 2px solid var(--branco-principal);
+}
+
+/* vamos estilizar o aviso */
+.container__aviso {
+    font-size: 12px;
+    color: var(--cinza-secundario);
+}
+
+
+/* -------------------- inicio sessao secundaria -------------------- */
+
+/* imagem */
+/* tamanho responsivo para imagem para facilitar na navegacao em dispositivos moveis */
+.secundario__imagem {
+
+    /* a imagem ira ocupar 80% do tamanho da pagina */
+    width: 80%;
+}
+
+.secundario {    
+    /* vamos alinhar a imagem e os textos ao centro */
+    align-items: center;
+
+    /* vamos criar uma margem lateral */
+    margin: 0 10em;
+}
+
+.descricao__titulo {
+    /* peso da fonte */
+    font-weight: 700;
+
+    /* tamanho da fonte */
+    font-size: 48px;
+
+    /* cor da fonte */
+    color: var(--branco-principal);
+
+    /* margem abaixo do titulo */
+    margin-bottom: 0.1em;
+}
+
+/* texto descritivo logo abaixo do titulo */
+.descricao__texto {
+    color: var(--cinza-secundario);
+}
+
+/* botao da terceira sessao */
+.secundario__botao {
+    /* para o botao respeitar o tamanho do texto dentro dele */
+    display: inline-block;
+
+    /* aumentar a margim na parte de cima */
+    margin-top: 1em;
+}
+
+.container__descricao {
+    padding: 2em;
+}
+
+/* ------------------- inicio sessao dispositivos ------------------- */
+.dispositivos {
+    /* centralizar texto */
+    text-align: center;
+}
+.dispositivos__titulo {
+    /* tamanho da fonte do titulo */
+    font-size: 48px;
+
+    /* cor do texto */
+    color: var(--branco-principal);
+}
+.dispositivos__lista {
+    /* espacamento titulo da lista */
+    margin: 5em 0;
+
+    /* remover a decoracao da lista */
+    list-style-type: none;
+
+    /* alinhamento dos intens lado a lado */
+    display: flex;
+
+    /* alinhamento dos itens no centro da pagina */
+    justify-content: center;
+}
+.lista__item {
+    /* tamanho fonte item */
+    font-size: 32px;
+
+    /* cor texto */
+    color: var(--branco-principal);
+}
+
+
+/* ------------------- inicio footer ------------------- */
+.rodape {
+    text-align: center;
+    margin: 5em 3em;
+}
+.rodape__lista {
+    /* espacamento titulo da lista */
+    margin-top: 1em;
+
+    /* remove decoracao links */
+    list-style-type: none;
+
+    /* links mesma linha lado a lado */
+    display: flex;
+
+    /* centralizar links */
+    justify-content: center;
+}
+
+/* sem inserir "a" no ".lista__link" nao estava sendo possivel remover a decoracao */
+.lista__link a {
+    text-decoration: none;
+    color: var(--branco-principal);
+    
+    /* espacamento entre os links */
+    margin-left: 1em;
+}
+/* efeitos nos links */
+.lista__link a:hover {
+    color: var(--botao-azul-efeito);
+}
+
+.rodape__texto {
+    /* espacamento titulo da lista */
+    margin: 1em 0;
+
+    /* tamanho fonte item */
+    font-size: 14px;
+
+    /* cor texto */
+    color: var(--branco-principal);
+}
